@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Button from './Button'
-import { formatNumberWithCommas } from '../utils/formatNumberWithCommas'
+import { formatNumberWithCommas } from '../utils/FormatNumberWithCommas'
 
 interface UnitConverterState {
     activeCategory: string
