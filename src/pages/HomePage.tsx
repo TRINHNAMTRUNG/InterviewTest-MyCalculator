@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Calculator } from "../components";
 import UnitConverter from "../components/UnitConverter";
-import backgroundImage from "../assets/IMG_2436.JPG";
+import backgroundImage from "../assets/IMG_2436.jpg";
 
 const HomePage: React.FC = () => {
     const [isCalculatorMode, setIsCalculatorMode] = useState(true)
