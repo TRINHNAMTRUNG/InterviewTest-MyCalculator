@@ -126,11 +126,12 @@ const UnitConverter: React.FC = () => {
 
         const result = (num * fromFactor) / toFactor
 
-        if (result >= 1000000 || (result < 0.001 && result !== 0)) {
+        // Chỉ hiển thị dạng exponential khi số quá lớn (>= 1e15) hoặc quá nhỏ (< 1e-10)
+        if (result >= 1000000000000000 || (result < 0.0000000001 && result !== 0)) {
             return result.toExponential(6)
         }
 
-        return parseFloat(result.toFixed(8)).toString()
+        return parseFloat(result.toFixed(12)).toString()
     }
 
     const convertTemperature = (value: number, from: string, to: string): number => {
