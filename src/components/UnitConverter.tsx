@@ -12,7 +12,6 @@ interface UnitConverterState {
 
 interface UnitCategory {
     name: string
-    icon: string
     units: {
         [key: string]: {
             name: string
@@ -33,7 +32,6 @@ const UnitConverter: React.FC = () => {
     const categories: { [key: string]: UnitCategory } = {
         area: {
             name: 'Diện tích',
-            icon: '📐',
             units: {
                 acre: { name: 'ac', factor: 4046.8564224 },
                 hectare: { name: 'ha', factor: 10000 },
@@ -45,7 +43,6 @@ const UnitConverter: React.FC = () => {
         },
         length: {
             name: 'Độ dài',
-            icon: '📏',
             units: {
                 meter: { name: 'm', factor: 1 },
                 kilometer: { name: 'km', factor: 1000 },
@@ -59,7 +56,6 @@ const UnitConverter: React.FC = () => {
         },
         weight: {
             name: 'Khối lượng',
-            icon: '⚖️',
             units: {
                 gram: { name: 'g', factor: 1 },
                 kilogram: { name: 'kg', factor: 1000 },
@@ -70,7 +66,6 @@ const UnitConverter: React.FC = () => {
         },
         temperature: {
             name: 'Nhiệt độ',
-            icon: '🌡️',
             units: {
                 celsius: { name: '°C', factor: 1 },
                 fahrenheit: { name: '°F', factor: 1 },
@@ -79,7 +74,6 @@ const UnitConverter: React.FC = () => {
         },
         volume: {
             name: 'Thể tích',
-            icon: '🥤',
             units: {
                 liter: { name: 'L', factor: 1 },
                 milliliter: { name: 'ml', factor: 0.001 },
@@ -91,7 +85,6 @@ const UnitConverter: React.FC = () => {
         },
         time: {
             name: 'Thời gian',
-            icon: '⏰',
             units: {
                 second: { name: 's', factor: 1 },
                 minute: { name: 'min', factor: 60 },
@@ -100,6 +93,21 @@ const UnitConverter: React.FC = () => {
                 week: { name: 'tuần', factor: 604800 },
                 month: { name: 'tháng', factor: 2629746 },
                 year: { name: 'năm', factor: 31556952 }
+            }
+        },
+        data: {
+            name: 'Dung lượng dữ liệu',
+            units: {
+                byte: { name: 'B', factor: 1 },
+                kilobyte: { name: 'KB', factor: 1024 },
+                megabyte: { name: 'MB', factor: 1024 * 1024 },
+                gigabyte: { name: 'GB', factor: 1024 * 1024 * 1024 },
+                terabyte: { name: 'TB', factor: 1024 * 1024 * 1024 * 1024 },
+                petabyte: { name: 'PB', factor: 1024 * 1024 * 1024 * 1024 * 1024 },
+                bit: { name: 'bit', factor: 0.125 },
+                kilobit: { name: 'Kbit', factor: 128 },
+                megabit: { name: 'Mbit', factor: 131072 },
+                gigabit: { name: 'Gbit', factor: 134217728 }
             }
         }
     }
